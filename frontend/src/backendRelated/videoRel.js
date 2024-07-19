@@ -68,7 +68,7 @@ const togglePublish=async(id)=>{
     }
 }
 
-const myVideo=async()=>{
+const myVideo=async(token)=>{
     try {
         const responce=await Axios.post(`${ApiURL}/videos/myVideos`,{},{ headers: {
         'Authoriztion': `Bearer ${token}`,
