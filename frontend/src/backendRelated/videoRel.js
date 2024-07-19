@@ -70,7 +70,9 @@ const togglePublish=async(id)=>{
 
 const myVideo=async()=>{
     try {
-        const responce=await Axios.post(`${ApiURL}/videos/myVideos`,{},{withCredentials:true})
+        const responce=await Axios.post(`${ApiURL}/videos/myVideos`,{},{ headers: {
+        'Authoriztion': `Bearer ${token}`,
+      },withCredentials:true})
         return responce.data
     } catch (error) {
         console.log(error);
