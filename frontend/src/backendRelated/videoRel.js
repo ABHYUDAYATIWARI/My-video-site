@@ -2,7 +2,7 @@ import Axios from "axios"
 import axiosInstance from './axionInstance';
 
 
-const ApiURL="http://localhost:3000/api/v1"
+const ApiURL=import.meta.env.VITE_API_URL
 
 
 const getAllVideos=async ()=>{
