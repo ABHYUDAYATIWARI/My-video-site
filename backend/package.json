@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "test for deploy backend",
   "main": "index.js",
+  "engines": {
+    "node": "18.x"
+  },
   "type": "module",
   "scripts": {
+    "start": "node index.js",
     "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
   },
   "keywords": [
