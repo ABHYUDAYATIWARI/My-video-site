@@ -36,20 +36,7 @@ function MyChannel() {
   const showPostVid = () => {
     postRef.current.classList.toggle("hidden");
   };
-
-  if (!info || !forSubs) {
-    return (
-      <div className="flex flex-wrap">
-        <div className="p-2 w-full">
-          <h1 className="text-2xl font-bold hover:text-gray-500 text-white">
-            loading....
-          </h1>
-        </div>
-      </div>
-    );
-  }
-  // console.log(myVideos);
-  if (!isAuthor) {
+ if (!isAuthor) {
     return (
       <div className="text-white w-full h-svh">
         <Header />
@@ -66,6 +53,19 @@ function MyChannel() {
       </div>
     );
   }
+  if (!info || !forSubs) {
+    return (
+      <div className="flex flex-wrap">
+        <div className="p-2 w-full">
+          <h1 className="text-2xl font-bold hover:text-gray-500 text-white">
+            loading....
+          </h1>
+        </div>
+      </div>
+    );
+  }
+  // console.log(myVideos);
+ 
 
   return (
     <div className="text-white">
