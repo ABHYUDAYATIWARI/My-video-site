@@ -21,8 +21,11 @@ import userRouter from "./routes/user.routes.js"
 import videoRouter from "./routes/video.route.js"
 import dashboardRouter from "./routes/dashboard.routes.js"
 import subsRouter from "./routes/subscription.routes.js"
+import home from "./routes/home.routes.js"
+
 
 //route declar
+app.use("/",home)
 app.use("/api/v1/users",userRouter)
 app.use("/api/v1/videos", videoRouter)
 app.use("/api/v1/dashboard", dashboardRouter)
