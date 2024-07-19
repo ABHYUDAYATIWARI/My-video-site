@@ -1,5 +1,5 @@
 import Axios from "axios"
-const ApiURL="http://localhost:3000/api/v1"
+const ApiURL=import.meta.env.VITE_API_URL
 
 const userChannel=async(username)=>{
     try {
