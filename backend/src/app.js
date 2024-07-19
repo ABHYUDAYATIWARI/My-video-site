@@ -5,7 +5,7 @@ import cors from "cors";
 const app=express()
 
 app.use(cors({
-    origin:process.env.CORS_URL,
+    origin:"https://my-video-site.vercel.app",
     credentials:true
 }))
 
