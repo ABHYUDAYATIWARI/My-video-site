@@ -40,7 +40,7 @@ const publishVideo=async(data)=>{
 
 const getVideoById=async (id)=>{
     try {
-        const responce=await axiosInstance.get(`/videos/${id}`)
+        const responce=await axiosInstance.get(`${ApiURL}/videos/${id}`)
         console.log("got the video");
         return responce.data
     } catch (error) {
