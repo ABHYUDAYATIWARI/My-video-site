@@ -15,9 +15,10 @@ function MyChannel() {
   const [forSubs, setForSubs] = useState(null);
   const [myVideos, setMyVideos] = useState();
   const isAuthor = useSelector((state) => state.auth.status);
+    const userData = useSelector((state) => state.auth.userData);
   const getinfo = async () => {
     const responce = await userService.getcurrentUser();
-    const vid = await videoRel.myVideo();
+    const vid = await videoRel.myVideo(userData.data.accessToken);
     setMyVideos(vid.data);
     setInfo(responce.data);
 
